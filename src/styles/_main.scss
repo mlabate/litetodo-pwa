@@ -1,0 +1,115 @@
+/* My styles*/
+$primary: #49b6ff;
+$pink: #e0b1cb;
+$black: #141414;
+$dark: #393d3f;
+$green: #1b998b;
+$red: #d1495b;
+$yellow: #ffbc0a;
+
+$light-bk: #fcfcfc;
+$light-text: $dark;
+
+$dark-bk: rgb(89, 89, 90);
+$dark-text: #fcfcfc;
+
+:root {
+  --primary: #{$primary};
+  --text-color: #{$light-text};
+  --background: #{$light-bk};
+
+  /*settings*/
+  --blue: #{$primary};
+  --pink: #{$pink};
+  --black: #{$black};
+  --green: #{$green};
+  --red: #{$red};
+  --yellow: #{$yellow};
+  /*themes*/
+  --dark: #{$dark};
+  --light: #{$light-bk};
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* THEME */
+#main-wrapper {
+  &[data-theme='primary'] {
+    --primary: #{$primary};
+  }
+
+  &[data-theme='pink'] {
+    --primary: #{$pink};
+  }
+
+  &[data-theme='black'] {
+    --primary: #{$black};
+  }
+
+  &[data-theme='green'] {
+    --primary: #{$green};
+  }
+
+  &[data-theme='red'] {
+    --primary: #{$red};
+  }
+
+  &[data-theme='yellow'] {
+    --primary: #{$yellow};
+  }
+  /*Modes*/
+  &[data-mode='light'] {
+    --background: #{$light-bk};
+    --text-color: #{$light-text};
+  }
+
+  &[data-mode='dark'] {
+    --background: #{$dark-bk};
+    --text-color: #{$dark-text};
+  }
+}
+
+#root {
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+
+[data-]
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+input[type='text'] {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 1rem 0 0.5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+button {
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}

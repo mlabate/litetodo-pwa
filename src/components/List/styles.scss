@@ -1,0 +1,94 @@
+.lists-wrapper {
+  margin: 2rem 0;
+  padding: 2em;
+  width: 100%;
+
+  .list-header {
+    background: var(--background);
+    display: block;
+    padding: 1rem 0;
+    position: sticky;
+    top: 160px;
+    width: 100%;
+    z-index: 10;
+
+    h3 {
+      padding: 1rem 0;
+    }
+  }
+
+}
+
+.lists-wrapper:only-of-type {
+  margin: 0;
+  padding-top: 0;
+
+  .list-header {
+    top: 0;
+  }
+}
+
+.task-list {
+  list-style: none;
+  margin: 1rem 0;
+
+  .task {
+    align-items: center;
+    border-bottom: 2px solid var(--primary);
+    border-radius: 8px 8px 0 0;
+
+    display: flex;
+    margin: 0.5rem 0;
+    padding: 0.5em;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    label {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+
+      .check-icon {
+        color: var(--primary);
+        margin: 0 1rem 0 0;
+        position: relative;
+      }
+    }
+
+    &.checked {
+      background: rgba(0, 0, 0, 0.05);
+      opacity: 1;
+      position: relative;
+    }
+
+    input[type='checkbox'] {
+      cursor: pointer;
+      display: none;
+      left: 0;
+      margin: 0 1rem;
+      padding: 0.5rem;
+      position: absolute;
+      top: 0;
+    }
+    
+    .icon {
+      cursor: pointer;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+
+.edit {
+  background: none;
+  border-style: none !important;
+  color: var(--text-color);
+  padding: 0.5rem !important;
+
+  &:focus {
+    background: #fcfcfc;
+    color: var(--black);
+  }
+}

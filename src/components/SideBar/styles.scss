@@ -1,0 +1,41 @@
+aside {
+  background: var(--primary);
+  border-radius: 0 1rem 1rem 0;
+  grid-area: sidebar;
+  opacity: 1;
+  padding: 2rem 0;
+
+  h2 {
+    color: #fdfdfd;
+    text-align: center;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 2rem 0 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    .menu-option {
+      align-items: center;
+      color: #fdfdfd;
+      cursor: pointer;
+      display: flex;
+      padding: 1rem 2rem;
+      transition: all 0.5s ease;
+
+      span {
+        padding: 0 1rem;
+      }
+
+      &.active {
+        background: #fdfdfd;
+        border-radius: 0 8px 8px 0;
+        color: var(--primary);
+        margin-right: 1rem;  
+      }
+    }
+  }
+}

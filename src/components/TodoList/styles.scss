@@ -1,0 +1,39 @@
+.list-view {
+  display: flex;
+  flex-flow: column;
+  grid-area: content;
+  padding: 1rem 2rem;
+  
+  width: 100%;
+
+  .add-task-section {
+    background: var(--background);
+    padding: 1rem 0;
+    z-index: 11;
+
+    .section-title {
+      color: var(--primary);
+    }
+
+    .input-wrapper {
+      align-items: center;
+    }
+        
+    .add-btn {
+      background: var(--primary);
+      color: #fcfcfc;
+      margin: 0.5rem 0;
+    
+      &.disabled {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .lists-wrapper {
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+}
+
